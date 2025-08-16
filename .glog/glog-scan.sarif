@@ -12,43 +12,7 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "glog-abb0b444-6ab9-4384-a566-e257fe23bc80",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"Exec Usage Detected\" is a vulnerability in Python that arises when the `exec()` function is used. The `exec()` function is a built-in Python function that executes Python code dynamically. This function can execute arbitrary Python code, making it a potential security risk if used improperly. If an attacker can influence the input to the `exec()` function, they can execute arbitrary code, leading to a Remote Code Execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nAvoid using the `exec()` function whenever possible. If you must use it, never pass user-supplied input to it. Always validate and sanitize input to ensure it does not contain malicious code. \n\n## Source Code Fix Recommendation\n\nIf you must use `exec()`, ensure that the input is safe. Here is an example of how you might do this:\n\n```python\n# BAD\ndecl = input(\"Enter something: \")\nns = {}\nexec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n\n# GOOD\ndecl = input(\"Enter something: \")\nns = {}\nif is_input_safe(decl):  # Implement this function to check if the input is safe\n    exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n```\n\nIn the above code, `is_input_safe()` is a hypothetical function that you would need to implement. This function should check if the input is safe to pass to `exec()`.\n\n## Library Dependencies\n\nThe code example does not require any external library dependencies. It only uses built-in Python functions.\n\n## OWASP Resources\n\n- [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B102"
-                ]
-              }
-            },
-            {
-              "id": "glog-30e0a2bd-1546-4b2d-8793-b3ba3367441e",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\nUntrusted Data Deserialization Vulnerability in Pickle and Related Modules is a critical security vulnerability in Python programming language. The vulnerability occurs when an application deserializes data from an untrusted source without proper validation. This can lead to arbitrary code execution, denial of service, or other malicious activities.\n\nThe `pickle` module in Python is used for serializing and deserializing Python object structures. However, it is not safe to deserialize data that comes from an untrusted source as it may result in executing arbitrary code during deserialization.\n\nIn the provided code snippet, `pickle.loads(rgs)` is a vulnerability sink where `rgs` is the untrusted data being deserialized.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid using `pickle` or similar modules to deserialize data from untrusted sources. If you must use serialization, consider using safer formats such as JSON.\n\nIf you need to use `pickle`, ensure that the data you are deserializing is from a trusted source and has not been tampered with. This can be achieved by using digital signatures or secure hash functions.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle`, you can use `json` for serialization and deserialization. Here is how you can modify the code:\n\n```python\nimport json\n\n# Serialize\nserialized_data = json.dumps(rgs)\n\n# Deserialize\nrgs = json.loads(serialized_data)\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module which is a built-in module in Python and does not require any additional library dependencies.\n\n## References\n\n- [OWASP Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B301"
-                ]
-              }
-            },
-            {
-              "id": "glog-a8a088e6-f127-47d0-8392-b0d7f7f268e9",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\nThe \"Untrusted Data Deserialization Vulnerability in Pickle Modules\" is a security vulnerability in Python programming language that occurs when an application deserializes data from an untrusted source without proper validation. The `pickle` module in Python is used for serializing and deserializing Python object structures, also called pickling and unpickling. If you're unpickling data received from an untrusted source, a malicious user can craft a payload that executes arbitrary code during the unpickling process. This can lead to serious security issues like remote code execution (RCE), denial of service (DoS), and other types of attacks.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid deserializing data from untrusted sources. If you must deserialize data, use safe, built-in Python modules like `json` or `csv` instead of `pickle`. These modules do not execute arbitrary code during deserialization.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle.loads(on)`, use `json.loads(on)` or `csv.reader(on)` depending on the format of your data. Here is an example using `json`:\n\n```python\nimport json\n\n# Assuming `on` is a JSON string\non = json.loads(on)\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module, which is a built-in Python module, so no additional library dependencies are needed.\n\n## OWASP Resources\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [OWASP Top 10 2017 - A8-Insecure Deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B301"
-                ]
-              }
-            },
-            {
-              "id": "glog-196b7b69-c29e-4d87-a588-045b3de081f4",
+              "id": "glog-c99d867b-9cd0-4250-8c7b-54a094fdb839",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nUntrusted Data Deserialization Vulnerability in Pickle and Related Modules is a critical security vulnerability in Python. The `pickle` module in Python is used for serializing and deserializing Python object structures. However, it is not safe to deserialize data that's coming from an untrusted or unauthenticated source. The reason is that the `pickle` module is capable of executing arbitrary code during deserialization. If an attacker can control the data that is being deserialized, they can execute arbitrary code on the system where the deserialization is happening, leading to serious security breaches.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid using `pickle` or similar modules (like `cPickle`, `dill`, etc.) to deserialize data from untrusted sources. Instead, use safer alternatives like `json` or `yaml` for serialization and deserialization of data. These modules do not execute arbitrary code during deserialization.\n\n## Source Code Fix Recommendation\n\nReplace the `pickle` module with `json` or `yaml`. Here is an example of how to do it with `json`:\n\n```python\nimport json\n\n# Instead of this:\n# info = pickle.load(f)\n\n# Do this:\ninfo = json.load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the `json` library, which is included in the standard Python library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
@@ -60,7 +24,55 @@
               }
             },
             {
-              "id": "glog-f65ce8b2-895e-492d-adc8-7ea587ced7a1",
+              "id": "glog-e17a7d00-a294-4af8-a522-6682e3868dab",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nUntrusted Data Deserialization Vulnerability in Pickle and Related Modules is a critical security vulnerability in Python programming language. The vulnerability occurs when an application deserializes data from an untrusted source without proper validation. This can lead to arbitrary code execution, denial of service, or other malicious activities.\n\nThe `pickle` module in Python is used for serializing and deserializing Python object structures. However, it is not safe to deserialize data that comes from an untrusted source as it may result in executing arbitrary code during deserialization.\n\nIn the provided code snippet, `pickle.loads(rgs)` is a vulnerability sink where `rgs` is the untrusted data being deserialized.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid using `pickle` or similar modules to deserialize data from untrusted sources. If you must use serialization, consider using safer formats such as JSON.\n\nIf you need to use `pickle`, ensure that the data you are deserializing is from a trusted source and has not been tampered with. This can be achieved by using digital signatures or secure hash functions.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle`, you can use `json` for serialization and deserialization. Here is how you can modify the code:\n\n```python\nimport json\n\n# Serialize\nserialized_data = json.dumps(rgs)\n\n# Deserialize\nrgs = json.loads(serialized_data)\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module which is a built-in module in Python and does not require any additional library dependencies.\n\n## References\n\n- [OWASP Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B301"
+                ]
+              }
+            },
+            {
+              "id": "glog-301e0e2b-e6b6-4c27-9f83-62e0fa979fc1",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\n\"Exec Usage Detected\" is a vulnerability in Python that arises when the `exec()` function is used. The `exec()` function is a built-in Python function that executes Python code dynamically. This function can execute arbitrary Python code, making it a potential security risk if used improperly. If an attacker can influence the input to the `exec()` function, they can execute arbitrary code, leading to a Remote Code Execution (RCE) vulnerability.\n\n## Mitigation Advice\n\nAvoid using the `exec()` function whenever possible. If you must use it, never pass user-supplied input to it. Always validate and sanitize input to ensure it does not contain malicious code. \n\n## Source Code Fix Recommendation\n\nIf you must use `exec()`, ensure that the input is safe. Here is an example of how you might do this:\n\n```python\n# BAD\ndecl = input(\"Enter something: \")\nns = {}\nexec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n\n# GOOD\ndecl = input(\"Enter something: \")\nns = {}\nif is_input_safe(decl):  # Implement this function to check if the input is safe\n    exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n```\n\nIn the above code, `is_input_safe()` is a hypothetical function that you would need to implement. This function should check if the input is safe to pass to `exec()`.\n\n## Library Dependencies\n\nThe code example does not require any external library dependencies. It only uses built-in Python functions.\n\n## OWASP Resources\n\n- [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-94: Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B102"
+                ]
+              }
+            },
+            {
+              "id": "glog-2a127b4e-fe44-4d04-b5f5-078bc163f2db",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe \"Untrusted Data Deserialization Vulnerability in Pickle Modules\" is a security vulnerability in Python programming language that occurs when an application deserializes data from an untrusted source without proper validation. The `pickle` module in Python is used for serializing and deserializing Python object structures, also called pickling and unpickling. If you're unpickling data received from an untrusted source, a malicious user can craft a payload that executes arbitrary code during the unpickling process. This can lead to serious security issues like remote code execution (RCE), denial of service (DoS), and other types of attacks.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid deserializing data from untrusted sources. If you must deserialize data, use safe, built-in Python modules like `json` or `csv` instead of `pickle`. These modules do not execute arbitrary code during deserialization.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle.loads(on)`, use `json.loads(on)` or `csv.reader(on)` depending on the format of your data. Here is an example using `json`:\n\n```python\nimport json\n\n# Assuming `on` is a JSON string\non = json.loads(on)\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module, which is a built-in Python module, so no additional library dependencies are needed.\n\n## OWASP Resources\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [OWASP Top 10 2017 - A8-Insecure Deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B301"
+                ]
+              }
+            },
+            {
+              "id": "glog-5d62e7a4-3766-4222-bc5e-a30f51ee0616",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe Python `pickle` module is used for serializing and deserializing Python object structures. However, it is not safe to load a pickle data received from an untrusted source. The `pickle` module is not capable of knowing or raising errors if the data is malicious. When deserializing pickle data, the data is processed until it reaches the end. This means that if a malicious user can control the input to `pickle.loads()`, they can cause arbitrary code execution, which is a serious security risk.\n\nThis vulnerability is known as \"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\".\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid deserializing data from untrusted or unauthenticated sources. Instead, use safer data serialization formats such as JSON, or use `pickle`'s safer alternatives like `jsonpickle` if you need to serialize complex Python types.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle.loads()`, you can use `json.loads()` from the `json` module, which is a safer alternative. Here is how you can modify the code:\n\n```python\nimport json\n\nk: json.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module, which is a built-in Python module, so no additional library dependencies are needed.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B301"
+                ]
+              }
+            },
+            {
+              "id": "glog-08870bf8-48d9-4020-99f2-acd8b1e6e576",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe \"Weak SHA1 Hash Vulnerability with usedforsecurity=False Setting\" is a security vulnerability in Python programming language that arises when the SHA1 hashing algorithm is used with the `usedforsecurity=False` setting. SHA1 is considered weak due to known vulnerabilities and is not recommended for cryptographic security. An attacker can exploit this vulnerability to perform collision attacks, which can lead to unauthorized access or information disclosure.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use a stronger hashing algorithm such as SHA256, SHA3, or bcrypt. These algorithms are currently considered secure and are less likely to be vulnerable to collision attacks.\n\n## Source Code Fix Recommendation\n\nReplace the SHA1 hashing algorithm with a stronger one. Here is an example of how to use SHA256:\n\n```python\nimport hashlib\n\ndef secure_hash(buf):\n    return hashlib.sha256(buf).digest()\n```\n\n## Library Dependencies\n\nThe code example requires the `hashlib` library, which is included in the standard Python library.\n\n## References\n\n- [OWASP Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)\n- [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)"
@@ -72,7 +84,7 @@
               }
             },
             {
-              "id": "glog-b626be13-f130-46c5-acab-79cd36c72898",
+              "id": "glog-487c1979-5208-4ebe-9475-442f480a673d",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nCross-Site Scripting (XSS) vulnerabilities occur when an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript. XSS allows attackers to execute scripts in the victim's browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.\n\nIn Python, when using the Jinja2 template engine, one common source of XSS vulnerabilities is the failure to use the autoescape feature, which automatically escapes output to prevent the injection of malicious code.\n\n## Mitigation Advice\n\nTo mitigate XSS vulnerabilities in Jinja2, you should always enable the autoescape feature. This will ensure that any variable data being output to a template will be properly escaped, preventing the execution of malicious scripts.\n\n## Source Code Fix Recommendation\n\nHere is how you can enable autoescape in Jinja2:\n\n```python\nfrom jinja2 import Environment, select_autoescape\n\nenvironment = Environment(\n    loader=loader,\n    autoescape=select_autoescape(['html', 'xml'])\n)\n```\n\nIn this example, the `select_autoescape` function is used to enable autoescaping for all templates with the extensions .html and .xml.\n\n## Library Dependencies\n\nThe code example requires the following Python library:\n\n- Jinja2\n\nYou can install it using pip:\n\n```bash\npip install Jinja2\n```\n\n## References\n\n- [OWASP Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)\n- [CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)"
@@ -80,18 +92,6 @@
               "properties": {
                 "tags": [
                   "B701"
-                ]
-              }
-            },
-            {
-              "id": "glog-7d062be0-81e4-499c-8b35-bfa7c6384364",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\nThe Python `pickle` module is used for serializing and deserializing Python object structures. However, it is not safe to load a pickle data received from an untrusted source. The `pickle` module is not capable of knowing or raising errors if the data is malicious. When deserializing pickle data, the data is processed until it reaches the end. This means that if a malicious user can control the input to `pickle.loads()`, they can cause arbitrary code execution, which is a serious security risk.\n\nThis vulnerability is known as \"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\".\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid deserializing data from untrusted or unauthenticated sources. Instead, use safer data serialization formats such as JSON, or use `pickle`'s safer alternatives like `jsonpickle` if you need to serialize complex Python types.\n\n## Source Code Fix Recommendation\n\nInstead of using `pickle.loads()`, you can use `json.loads()` from the `json` module, which is a safer alternative. Here is how you can modify the code:\n\n```python\nimport json\n\nk: json.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n```\n\n## Library Dependencies\n\nThe code example requires the `pickle` module, which is a built-in Python module, so no additional library dependencies are needed.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B301"
                 ]
               }
             }
@@ -107,118 +107,7 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "glog-abb0b444-6ab9-4384-a566-e257fe23bc80",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "\"Exec Usage Detected\""
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/slicing.py"
-                },
-                "region": {
-                  "startLine": 760,
-                  "startColumn": 9,
-                  "endLine": 760,
-                  "endColumn": 57,
-                  "snippet": {
-                    "text": "        exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n"
-                  }
-                },
-                "contextRegion": {
-                  "startLine": 759,
-                  "endLine": 761,
-                  "snippet": {
-                    "text": "        ns = {}\n        exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n        return ns[\"expand\"]\n"
-                  }
-                }
-              }
-            }
-          ],
-          "properties": {
-            "issue_severity": "MEDIUM",
-            "issue_confidence": "HIGH"
-          }
-        },
-        {
-          "ruleId": "glog-30e0a2bd-1546-4b2d-8793-b3ba3367441e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "\"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\""
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dataframe/io/parquet/fastparquet.py"
-                },
-                "region": {
-                  "startLine": 1038,
-                  "startColumn": 31,
-                  "endLine": 1038,
-                  "endColumn": 48,
-                  "snippet": {
-                    "text": "                        rgs = pickle.loads(rgs)\n"
-                  }
-                },
-                "contextRegion": {
-                  "startLine": 1037,
-                  "endLine": 1039,
-                  "snippet": {
-                    "text": "                    if isinstance(rgs, bytes):\n                        rgs = pickle.loads(rgs)\n                    row_groups += rgs\n"
-                  }
-                }
-              }
-            }
-          ],
-          "properties": {
-            "issue_severity": "MEDIUM",
-            "issue_confidence": "HIGH"
-          }
-        },
-        {
-          "ruleId": "glog-a8a088e6-f127-47d0-8392-b0d7f7f268e9",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Untrusted Data Deserialization Vulnerability in Pickle Modules"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dataframe/multi.py"
-                },
-                "region": {
-                  "startLine": 1399,
-                  "startColumn": 14,
-                  "endLine": 1399,
-                  "endColumn": 30,
-                  "snippet": {
-                    "text": "        on = pickle.loads(on)\n"
-                  }
-                },
-                "contextRegion": {
-                  "startLine": 1398,
-                  "endLine": 1400,
-                  "snippet": {
-                    "text": "    if isinstance(on, bytes):\n        on = pickle.loads(on)\n\n"
-                  }
-                }
-              }
-            }
-          ],
-          "properties": {
-            "issue_severity": "MEDIUM",
-            "issue_confidence": "HIGH"
-          }
-        },
-        {
-          "ruleId": "glog-196b7b69-c29e-4d87-a588-045b3de081f4",
+          "ruleId": "glog-c99d867b-9cd0-4250-8c7b-54a094fdb839",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -255,7 +144,155 @@
           }
         },
         {
-          "ruleId": "glog-f65ce8b2-895e-492d-adc8-7ea587ced7a1",
+          "ruleId": "glog-e17a7d00-a294-4af8-a522-6682e3868dab",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "\"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/io/parquet/fastparquet.py"
+                },
+                "region": {
+                  "startLine": 1038,
+                  "startColumn": 31,
+                  "endLine": 1038,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "                        rgs = pickle.loads(rgs)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1037,
+                  "endLine": 1039,
+                  "snippet": {
+                    "text": "                    if isinstance(rgs, bytes):\n                        rgs = pickle.loads(rgs)\n                    row_groups += rgs\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-301e0e2b-e6b6-4c27-9f83-62e0fa979fc1",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "\"Exec Usage Detected\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/slicing.py"
+                },
+                "region": {
+                  "startLine": 760,
+                  "startColumn": 9,
+                  "endLine": 760,
+                  "endColumn": 57,
+                  "snippet": {
+                    "text": "        exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 759,
+                  "endLine": 761,
+                  "snippet": {
+                    "text": "        ns = {}\n        exec(compile(decl, \"<dynamic>\", \"exec\"), ns, ns)\n        return ns[\"expand\"]\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-2a127b4e-fe44-4d04-b5f5-078bc163f2db",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Untrusted Data Deserialization Vulnerability in Pickle Modules"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/multi.py"
+                },
+                "region": {
+                  "startLine": 1399,
+                  "startColumn": 14,
+                  "endLine": 1399,
+                  "endColumn": 30,
+                  "snippet": {
+                    "text": "        on = pickle.loads(on)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1398,
+                  "endLine": 1400,
+                  "snippet": {
+                    "text": "    if isinstance(on, bytes):\n        on = pickle.loads(on)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-5d62e7a4-3766-4222-bc5e-a30f51ee0616",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "\"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/multi.py"
+                },
+                "region": {
+                  "startLine": 1440,
+                  "startColumn": 16,
+                  "endLine": 1440,
+                  "endColumn": 31,
+                  "snippet": {
+                    "text": "            k: pickle.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 1439,
+                  "endLine": 1441,
+                  "snippet": {
+                    "text": "        **{\n            k: pickle.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n        },\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-08870bf8-48d9-4020-99f2-acd8b1e6e576",
           "kind": "fail",
           "level": "error",
           "message": {
@@ -292,7 +329,7 @@
           }
         },
         {
-          "ruleId": "glog-b626be13-f130-46c5-acab-79cd36c72898",
+          "ruleId": "glog-487c1979-5208-4ebe-9475-442f480a673d",
           "kind": "fail",
           "level": "error",
           "message": {
@@ -325,43 +362,6 @@
           ],
           "properties": {
             "issue_severity": "HIGH",
-            "issue_confidence": "HIGH"
-          }
-        },
-        {
-          "ruleId": "glog-7d062be0-81e4-499c-8b35-bfa7c6384364",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "\"Untrusted Data Deserialization Vulnerability in Pickle and Related Modules\""
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dataframe/multi.py"
-                },
-                "region": {
-                  "startLine": 1440,
-                  "startColumn": 16,
-                  "endLine": 1440,
-                  "endColumn": 31,
-                  "snippet": {
-                    "text": "            k: pickle.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n"
-                  }
-                },
-                "contextRegion": {
-                  "startLine": 1439,
-                  "endLine": 1441,
-                  "snippet": {
-                    "text": "        **{\n            k: pickle.loads(v) if isinstance(v, bytes) else v for k, v in kwargs.items()\n        },\n"
-                  }
-                }
-              }
-            }
-          ],
-          "properties": {
-            "issue_severity": "MEDIUM",
             "issue_confidence": "HIGH"
           }
         }
