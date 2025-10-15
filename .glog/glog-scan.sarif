@@ -60,30 +60,6 @@
               }
             },
             {
-              "id": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
@@ -104,6 +80,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
+              "id": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
                 ]
               }
             },
@@ -324,31 +324,6 @@
               }
             },
             {
-              "id": "4c6d206f-b12d-314d-9541-3bf445ff9ff1",
-              "name": "python.lang.security.deserialization.pickle.avoid-pickle",
-              "shortDescription": {
-                "text": "Opengrep Finding: python.lang.security.deserialization.pickle.avoid-pickle"
-              },
-              "fullDescription": {
-                "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "helpUri": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
-              "help": {
-                "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle)\n - [https://docs.python.org/3/library/pickle.html](https://docs.python.org/3/library/pickle.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "python.lang.security.deserialization.pickle.avoid-pickle"
-                ]
-              }
-            },
-            {
               "id": "e4012c09-edd5-3124-8356-6b97593d781e",
               "name": "python.lang.security.insecure-uuid-version.insecure-uuid-version",
               "shortDescription": {
@@ -370,6 +345,31 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.insecure-uuid-version.insecure-uuid-version"
+                ]
+              }
+            },
+            {
+              "id": "4c6d206f-b12d-314d-9541-3bf445ff9ff1",
+              "name": "python.lang.security.deserialization.pickle.avoid-pickle",
+              "shortDescription": {
+                "text": "Opengrep Finding: python.lang.security.deserialization.pickle.avoid-pickle"
+              },
+              "fullDescription": {
+                "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "helpUri": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+              "help": {
+                "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle)\n - [https://docs.python.org/3/library/pickle.html](https://docs.python.org/3/library/pickle.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "python.lang.security.deserialization.pickle.avoid-pickle"
                 ]
               }
             },
@@ -448,30 +448,6 @@
               }
             },
             {
-              "id": "af7c55fb-9c2e-36b4-9855-a894eaca4936",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "36aa583a-e8c4-3fcd-912a-45d61e88cd22",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -520,7 +496,7 @@
               }
             },
             {
-              "id": "f44a7232-66ba-3299-8459-5741fd888548",
+              "id": "af7c55fb-9c2e-36b4-9855-a894eaca4936",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -568,27 +544,26 @@
               }
             },
             {
-              "id": "9f76f66d-bb07-33a7-a281-e28132531f95",
-              "name": "python.lang.security.audit.non-literal-import.non-literal-import",
+              "id": "f44a7232-66ba-3299-8459-5741fd888548",
+              "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
-                "text": "Opengrep Finding: python.lang.security.audit.non-literal-import.non-literal-import"
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
               },
               "fullDescription": {
-                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "warning"
+                "level": "error"
               },
-              "helpUri": "https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import",
               "help": {
-                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import)\n - [https://owasp.org/Top10/A01_2021-Broken_Access_Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control)\n"
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "python.lang.security.audit.non-literal-import.non-literal-import"
+                  "resources.rules.dlint-catastrophic-redos"
                 ]
               }
             },
@@ -618,7 +593,7 @@
               }
             },
             {
-              "id": "f998578b-95c5-3eb9-ae7e-a850871761e8",
+              "id": "9f76f66d-bb07-33a7-a281-e28132531f95",
               "name": "python.lang.security.audit.non-literal-import.non-literal-import",
               "shortDescription": {
                 "text": "Opengrep Finding: python.lang.security.audit.non-literal-import.non-literal-import"
@@ -663,6 +638,31 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "f998578b-95c5-3eb9-ae7e-a850871761e8",
+              "name": "python.lang.security.audit.non-literal-import.non-literal-import",
+              "shortDescription": {
+                "text": "Opengrep Finding: python.lang.security.audit.non-literal-import.non-literal-import"
+              },
+              "fullDescription": {
+                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "helpUri": "https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import",
+              "help": {
+                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import)\n - [https://owasp.org/Top10/A01_2021-Broken_Access_Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "python.lang.security.audit.non-literal-import.non-literal-import"
                 ]
               }
             },
@@ -764,30 +764,6 @@
               }
             },
             {
-              "id": "1b4f1a1a-f89c-3041-9633-8064d5b7df2a",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
               "id": "fe69314a-11a6-33e4-8eeb-bfaaba676c6b",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
@@ -812,7 +788,7 @@
               }
             },
             {
-              "id": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
+              "id": "1b4f1a1a-f89c-3041-9633-8064d5b7df2a",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -837,6 +813,30 @@
             },
             {
               "id": "005b5370-6c3b-39a8-84bd-9ad37ff0818c",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
+              "id": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -908,7 +908,55 @@
               }
             },
             {
+              "id": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
               "id": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
+              "id": "75b3d815-c7f4-3bbf-ace9-1b76aea3025d",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -957,79 +1005,7 @@
               }
             },
             {
-              "id": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
-              "id": "75b3d815-c7f4-3bbf-ace9-1b76aea3025d",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
               "id": "0358a9de-d7ef-3504-9c45-de8e153a2458",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
-              "id": "400e41a9-2dac-37e7-9d63-c5c8be870eed",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1078,6 +1054,30 @@
             },
             {
               "id": "182b6c35-f48d-36de-b48f-1b5ba4bdd709",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
+              "id": "400e41a9-2dac-37e7-9d63-c5c8be870eed",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1245,30 +1245,6 @@
               }
             },
             {
-              "id": "428d39b6-404c-3adc-b1d8-807156f85a70",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
               "id": "c9f600ff-b637-3696-84f9-a6a4892ff0bb",
               "name": "python.lang.security.insecure-uuid-version.insecure-uuid-version",
               "shortDescription": {
@@ -1290,6 +1266,30 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.insecure-uuid-version.insecure-uuid-version"
+                ]
+              }
+            },
+            {
+              "id": "428d39b6-404c-3adc-b1d8-807156f85a70",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
                 ]
               }
             },
@@ -1318,7 +1318,7 @@
               }
             },
             {
-              "id": "7fe418ce-aabd-3e1f-917b-83eca8766141",
+              "id": "8a63db7d-6be9-320c-9ba5-78a0cbe27343",
               "name": "python.lang.security.deserialization.pickle.avoid-pickle",
               "shortDescription": {
                 "text": "Opengrep Finding: python.lang.security.deserialization.pickle.avoid-pickle"
@@ -1367,7 +1367,7 @@
               }
             },
             {
-              "id": "8a63db7d-6be9-320c-9ba5-78a0cbe27343",
+              "id": "7fe418ce-aabd-3e1f-917b-83eca8766141",
               "name": "python.lang.security.deserialization.pickle.avoid-pickle",
               "shortDescription": {
                 "text": "Opengrep Finding: python.lang.security.deserialization.pickle.avoid-pickle"
@@ -1417,30 +1417,6 @@
               }
             },
             {
-              "id": "53534619-14ff-3170-83f4-fa13adec84aa",
-              "name": "resources.rules.return-in-init",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.return-in-init"
-              },
-              "fullDescription": {
-                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.return-in-init"
-                ]
-              }
-            },
-            {
               "id": "08275f07-7efe-33d9-931f-d6c6b52a6931",
               "name": "python.lang.security.insecure-uuid-version.insecure-uuid-version",
               "shortDescription": {
@@ -1467,6 +1443,54 @@
             },
             {
               "id": "9aca9b39-1d7d-35b9-a92d-edf50269e9ee",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "53534619-14ff-3170-83f4-fa13adec84aa",
+              "name": "resources.rules.return-in-init",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-in-init"
+              },
+              "fullDescription": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` should never appear inside a class __init__ function. This will cause a runtime error.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-in-init"
+                ]
+              }
+            },
+            {
+              "id": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1563,31 +1587,7 @@
               }
             },
             {
-              "id": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "05eaf877-046b-34f8-bd74-3d7c9a6bfbc4",
+              "id": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1611,7 +1611,7 @@
               }
             },
             {
-              "id": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
+              "id": "05eaf877-046b-34f8-bd74-3d7c9a6bfbc4",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1683,6 +1683,30 @@
               }
             },
             {
+              "id": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
               "id": "e5f59957-21f4-37a5-96e7-78bd57fa68ec",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
@@ -1731,55 +1755,7 @@
               }
             },
             {
-              "id": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
               "id": "2426b53c-e946-379f-be61-8b1e75ab654a",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
-              "id": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1827,7 +1803,7 @@
               }
             },
             {
-              "id": "4e9c9e9d-8b17-3a6e-9dc2-f56828880ecf",
+              "id": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1852,6 +1828,30 @@
             },
             {
               "id": "d95ba8be-7fd4-3dcc-93c8-163886b2ee7c",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
+              "id": "4e9c9e9d-8b17-3a6e-9dc2-f56828880ecf",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -2069,31 +2069,6 @@
               }
             },
             {
-              "id": "e25dccd0-2cea-382c-84dd-215e9208abb2",
-              "name": "python.lang.security.audit.non-literal-import.non-literal-import",
-              "shortDescription": {
-                "text": "Opengrep Finding: python.lang.security.audit.non-literal-import.non-literal-import"
-              },
-              "fullDescription": {
-                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "helpUri": "https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import",
-              "help": {
-                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import)\n - [https://owasp.org/Top10/A01_2021-Broken_Access_Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "python.lang.security.audit.non-literal-import.non-literal-import"
-                ]
-              }
-            },
-            {
               "id": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
               "name": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
               "shortDescription": {
@@ -2115,6 +2090,31 @@
                 "precision": "very-high",
                 "tags": [
                   "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2"
+                ]
+              }
+            },
+            {
+              "id": "e25dccd0-2cea-382c-84dd-215e9208abb2",
+              "name": "python.lang.security.audit.non-literal-import.non-literal-import",
+              "shortDescription": {
+                "text": "Opengrep Finding: python.lang.security.audit.non-literal-import.non-literal-import"
+              },
+              "fullDescription": {
+                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "helpUri": "https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import",
+              "help": {
+                "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.lang.security.audit.non-literal-import.non-literal-import)\n - [https://owasp.org/Top10/A01_2021-Broken_Access_Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "python.lang.security.audit.non-literal-import.non-literal-import"
                 ]
               }
             }
@@ -2192,37 +2192,6 @@
           "properties": {}
         },
         {
-          "ruleId": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/_version.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 163,
-                  "startColumn": 26,
-                  "endLine": 163,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
           "kind": "fail",
           "level": "warning",
@@ -2250,6 +2219,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "1eec02b02880e8789a91d562a2114a547484a1eb101c5e384441b7562ddebd2142ae5c91f39b3a3050fb43af292d96fb039376055ecafef64260e17179ce8084_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/_version.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 163,
+                  "startColumn": 26,
+                  "endLine": 163,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_0"
           },
           "properties": {}
         },
@@ -2533,37 +2533,6 @@
           "properties": {}
         },
         {
-          "ruleId": "4c6d206f-b12d-314d-9541-3bf445ff9ff1",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/core.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 5677,
-                  "startColumn": 9,
-                  "endLine": 5677,
-                  "endColumn": 29,
-                  "snippet": {
-                    "text": "        pickle.dump(meta, f)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "cbc03ab08dc777efc0f49f6fd6f7f4813f9ab63741c1766ea0d1f4b9267809ec9cfb58f73a2d902aa50a6ed8d98c5d0f0bb50a23bec00a6f9a2b93e2068f6f49_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "e4012c09-edd5-3124-8356-6b97593d781e",
           "kind": "fail",
           "level": "warning",
@@ -2591,6 +2560,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5922fa5fddd48549d257ac2715d88b26593f611e771ff3b35ee34d70d9a2d0e7f64ecb263a7015039d23b9b7d79f837a2094c50625fb7a05fe06144ee435d12_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "4c6d206f-b12d-314d-9541-3bf445ff9ff1",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/core.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5677,
+                  "startColumn": 9,
+                  "endLine": 5677,
+                  "endColumn": 29,
+                  "snippet": {
+                    "text": "        pickle.dump(meta, f)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "cbc03ab08dc777efc0f49f6fd6f7f4813f9ab63741c1766ea0d1f4b9267809ec9cfb58f73a2d902aa50a6ed8d98c5d0f0bb50a23bec00a6f9a2b93e2068f6f49_0"
           },
           "properties": {}
         },
@@ -2688,37 +2688,6 @@
           "properties": {}
         },
         {
-          "ruleId": "af7c55fb-9c2e-36b4-9855-a894eaca4936",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `_DIMENSION_NAME` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/gufunc.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 52,
-                  "startColumn": 15,
-                  "endLine": 52,
-                  "endColumn": 47,
-                  "snippet": {
-                    "text": "        tuple(re.findall(_DIMENSION_NAME, arg))"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "8a96a04c6dab2b4189200c78b54183af74e8fe4d90d22277d2bd36ee779d8ba9a2e5f023989d0e246462def9f0ed0360e48effdec7c6add5d3d9c165186f6545_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "36aa583a-e8c4-3fcd-912a-45d61e88cd22",
           "kind": "fail",
           "level": "warning",
@@ -2777,6 +2746,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c02c7d235d85973f44e52d0ec29186a6b70c9520acb27511a54da750f3396e3fd2120d4b49d0ff29167b21d94dade076a8fcb46bc08efd7d8599bbc3c6fb143f_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "af7c55fb-9c2e-36b4-9855-a894eaca4936",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `_DIMENSION_NAME` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/gufunc.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 15,
+                  "endLine": 52,
+                  "endColumn": 47,
+                  "snippet": {
+                    "text": "        tuple(re.findall(_DIMENSION_NAME, arg))"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "8a96a04c6dab2b4189200c78b54183af74e8fe4d90d22277d2bd36ee779d8ba9a2e5f023989d0e246462def9f0ed0360e48effdec7c6add5d3d9c165186f6545_1"
           },
           "properties": {}
         },
@@ -2843,37 +2843,6 @@
           "properties": {}
         },
         {
-          "ruleId": "9f76f66d-bb07-33a7-a281-e28132531f95",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/random.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 533,
-                  "startColumn": 16,
-                  "endLine": 533,
-                  "endColumn": 54,
-                  "snippet": {
-                    "text": "        return importlib.import_module(_backend_name)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "fc45399ce9fc5e6d68735f6898a646c6b3216dd7a9aea0dfce3f4813291c0d80c2e58a3ea41357e45618e34df8e7183d6dc75f1a66f4bb4df833388e6aeec06a_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "e4ef372b-8a28-3a71-945f-a36140b5934c",
           "kind": "fail",
           "level": "warning",
@@ -2905,7 +2874,7 @@
           "properties": {}
         },
         {
-          "ruleId": "f998578b-95c5-3eb9-ae7e-a850871761e8",
+          "ruleId": "9f76f66d-bb07-33a7-a281-e28132531f95",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -2919,19 +2888,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 788,
-                  "startColumn": 19,
-                  "endLine": 788,
-                  "endColumn": 56,
+                  "startLine": 533,
+                  "startColumn": 16,
+                  "endLine": 533,
+                  "endColumn": 54,
                   "snippet": {
-                    "text": "    backend_lib = importlib.import_module(backend_name)"
+                    "text": "        return importlib.import_module(_backend_name)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "41bd37bd02a185b947288f14f95554c8c27ac15ba4521f67c76885d370056fcc330eb9874953f52056ca2368d7e234516949560c32517168b70c40c80dff0c8b_0"
+            "matchBasedId/v1": "fc45399ce9fc5e6d68735f6898a646c6b3216dd7a9aea0dfce3f4813291c0d80c2e58a3ea41357e45618e34df8e7183d6dc75f1a66f4bb4df833388e6aeec06a_0"
           },
           "properties": {}
         },
@@ -2963,6 +2932,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "5138a0dcac706438617b0e72def00f5ff800875bc6b7ad9e4712b53aeed571d85dfeeaa658c814d08c46edf8e602db0e40b19130948dd19c76299ce9d2cc39cc_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f998578b-95c5-3eb9-ae7e-a850871761e8",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/random.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 788,
+                  "startColumn": 19,
+                  "endLine": 788,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "    backend_lib = importlib.import_module(backend_name)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "41bd37bd02a185b947288f14f95554c8c27ac15ba4521f67c76885d370056fcc330eb9874953f52056ca2368d7e234516949560c32517168b70c40c80dff0c8b_0"
           },
           "properties": {}
         },
@@ -3091,37 +3091,6 @@
           "properties": {}
         },
         {
-          "ruleId": "1b4f1a1a-f89c-3041-9633-8064d5b7df2a",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `normalize_categorical` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1149,
-                  "startColumn": 5,
-                  "endLine": 1151,
-                  "endColumn": 72,
-                  "snippet": {
-                    "text": "    @normalize_token.register(pd.Categorical)\n    def normalize_categorical(cat):\n        return [normalize_token(cat.codes), normalize_token(cat.dtype)]"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_2"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "fe69314a-11a6-33e4-8eeb-bfaaba676c6b",
           "kind": "fail",
           "level": "warning",
@@ -3153,11 +3122,11 @@
           "properties": {}
         },
         {
-          "ruleId": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
+          "ruleId": "1b4f1a1a-f89c-3041-9633-8064d5b7df2a",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "function `normalize_period_array` is defined inside a function but never used"
+            "text": "function `normalize_categorical` is defined inside a function but never used"
           },
           "locations": [
             {
@@ -3167,19 +3136,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 1153,
+                  "startLine": 1149,
                   "startColumn": 5,
-                  "endLine": 1157,
-                  "endColumn": 71,
+                  "endLine": 1151,
+                  "endColumn": 72,
                   "snippet": {
-                    "text": "    @normalize_token.register(pd.arrays.PeriodArray)\n    @normalize_token.register(pd.arrays.DatetimeArray)\n    @normalize_token.register(pd.arrays.TimedeltaArray)\n    def normalize_period_array(arr):\n        return [normalize_token(arr.asi8), normalize_token(arr.dtype)]"
+                    "text": "    @normalize_token.register(pd.Categorical)\n    def normalize_categorical(cat):\n        return [normalize_token(cat.codes), normalize_token(cat.dtype)]"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_3"
+            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_2"
           },
           "properties": {}
         },
@@ -3211,6 +3180,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_4"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `normalize_period_array` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1153,
+                  "startColumn": 5,
+                  "endLine": 1157,
+                  "endColumn": 71,
+                  "snippet": {
+                    "text": "    @normalize_token.register(pd.arrays.PeriodArray)\n    @normalize_token.register(pd.arrays.DatetimeArray)\n    @normalize_token.register(pd.arrays.TimedeltaArray)\n    def normalize_period_array(arr):\n        return [normalize_token(arr.asi8), normalize_token(arr.dtype)]"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_3"
           },
           "properties": {}
         },
@@ -3277,68 +3277,6 @@
           "properties": {}
         },
         {
-          "ruleId": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `normalize_extension_array` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1182,
-                  "startColumn": 5,
-                  "endLine": 1186,
-                  "endColumn": 48,
-                  "snippet": {
-                    "text": "    @normalize_token.register(pd.api.extensions.ExtensionArray)\n    def normalize_extension_array(arr):\n        import numpy as np\n\n        return normalize_token(np.asarray(arr))"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_7"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "c428e430-89ef-3c0b-af05-5e147a169cdd",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1239,
-                  "startColumn": 44,
-                  "endLine": 1239,
-                  "endColumn": 84,
-                  "snippet": {
-                    "text": "                    data = hash_buffer_hex(pickle.dumps(x, pickle.HIGHEST_PROTOCOL))"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "e4af780668f24a49b81656c883247b1005f1525a9302b1cec9e4d048f7fa3fb17f4d3cc2bca972037efecd57af066bdfb489c4c63ce941b3d8ee20dfef59fbff_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
           "kind": "fail",
           "level": "warning",
@@ -3366,6 +3304,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_8"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `normalize_extension_array` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1182,
+                  "startColumn": 5,
+                  "endLine": 1186,
+                  "endColumn": 48,
+                  "snippet": {
+                    "text": "    @normalize_token.register(pd.api.extensions.ExtensionArray)\n    def normalize_extension_array(arr):\n        import numpy as np\n\n        return normalize_token(np.asarray(arr))"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_7"
           },
           "properties": {}
         },
@@ -3401,6 +3370,37 @@
           "properties": {}
         },
         {
+          "ruleId": "c428e430-89ef-3c0b-af05-5e147a169cdd",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1239,
+                  "startColumn": 44,
+                  "endLine": 1239,
+                  "endColumn": 84,
+                  "snippet": {
+                    "text": "                    data = hash_buffer_hex(pickle.dumps(x, pickle.HIGHEST_PROTOCOL))"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "e4af780668f24a49b81656c883247b1005f1525a9302b1cec9e4d048f7fa3fb17f4d3cc2bca972037efecd57af066bdfb489c4c63ce941b3d8ee20dfef59fbff_1"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "0358a9de-d7ef-3504-9c45-de8e153a2458",
           "kind": "fail",
           "level": "warning",
@@ -3428,37 +3428,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "7306da880d2314d4287a60119425badf4a1da1a8073db269173fc9f0d5e093983da982499abc8eee4acc56c7e400c4e965992e5c399b77c728f63208e53fbc33_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "400e41a9-2dac-37e7-9d63-c5c8be870eed",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `normalize_dok_matrix` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1299,
-                  "startColumn": 5,
-                  "endLine": 1301,
-                  "endColumn": 68,
-                  "snippet": {
-                    "text": "    @normalize_token.register(sp.dok_matrix)\n    def normalize_dok_matrix(x):\n        return type(x).__name__, normalize_token(sorted(x.items()))"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "d0da429b89bf4e8b4a2646b840a5c1a6f08316e93eaca8257a2b2847c4ec5e75f350a19f6bc42d43c8020beba9f0edf5a6840fb774b59803e15a96d7a78d7cb9_0"
           },
           "properties": {}
         },
@@ -3525,6 +3494,37 @@
           "properties": {}
         },
         {
+          "ruleId": "400e41a9-2dac-37e7-9d63-c5c8be870eed",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `normalize_dok_matrix` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1299,
+                  "startColumn": 5,
+                  "endLine": 1301,
+                  "endColumn": 68,
+                  "snippet": {
+                    "text": "    @normalize_token.register(sp.dok_matrix)\n    def normalize_dok_matrix(x):\n        return type(x).__name__, normalize_token(sorted(x.items()))"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "d0da429b89bf4e8b4a2646b840a5c1a6f08316e93eaca8257a2b2847c4ec5e75f350a19f6bc42d43c8020beba9f0edf5a6840fb774b59803e15a96d7a78d7cb9_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "c29d2aca-d979-33d0-b790-de48b6203b73",
           "kind": "fail",
           "level": "warning",
@@ -3556,37 +3556,6 @@
           "properties": {}
         },
         {
-          "ruleId": "1660b148-f76b-3a31-a6a9-06231da0cba8",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/cli.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 75,
-                  "startColumn": 13,
-                  "endLine": 75,
-                  "endColumn": 20,
-                  "snippet": {
-                    "text": "            exit(1)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c5836ca91db773ec74f792dcc83873a91a99fbdcc38ee2a51eb6282fec4df8b2dd50b7b0085e12ef9b39740315f8ed8ab8e33422c7c8cd8fafc85ad9ff125904_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "90e799fd-8be0-3b40-815d-e1ff220564da",
           "kind": "fail",
           "level": "warning",
@@ -3614,6 +3583,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5836ca91db773ec74f792dcc83873a91a99fbdcc38ee2a51eb6282fec4df8b2dd50b7b0085e12ef9b39740315f8ed8ab8e33422c7c8cd8fafc85ad9ff125904_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "1660b148-f76b-3a31-a6a9-06231da0cba8",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/cli.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 13,
+                  "endLine": 75,
+                  "endColumn": 20,
+                  "snippet": {
+                    "text": "            exit(1)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c5836ca91db773ec74f792dcc83873a91a99fbdcc38ee2a51eb6282fec4df8b2dd50b7b0085e12ef9b39740315f8ed8ab8e33422c7c8cd8fafc85ad9ff125904_1"
           },
           "properties": {}
         },
@@ -3680,33 +3680,33 @@
           "properties": {}
         },
         {
-          "ruleId": "428d39b6-404c-3adc-b1d8-807156f85a70",
+          "ruleId": "55ed4099-426d-3cc4-b46f-78712b6339cc",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "function `_get_schema` is defined inside a function but never used"
+            "text": "Regex `r\"[^a-zA-Z0-9]\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "dask/dataframe/io/orc/arrow.py",
+                  "uri": "dask/dataframe/io/demo.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 9,
-                  "endLine": 34,
-                  "endColumn": 26,
+                  "startLine": 518,
+                  "startColumn": 22,
+                  "endLine": 518,
+                  "endColumn": 66,
                   "snippet": {
-                    "text": "        def _get_schema(_o, schema):\n            if schema is None:\n                schema = _o.schema\n            elif schema != _o.schema:\n                raise ValueError(\"Incompatible schemas while parsing ORC files\")\n            return schema"
+                    "text": "            prefix = re.sub(r\"[^a-zA-Z0-9]\", \"_\", f\"{col.dtype}\").rstrip(\"_\")"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "101a5b6022a91bb96265b8235610abe15b1bf7890fe571c81332f6eb618d2807606b2f884d70b050d34dba35547d3c2fa4a23df323573d232b5e7d06ce9a0eb4_0"
+            "matchBasedId/v1": "4f0b13cc39afe3c1c2cc4ea9d0fed7a8a31ca1fb20a58be1358dbe19242574159e261c8b1f4cdbb1eddbfa4f0ca9c9547d44e2870f367d4741260365e1abcb83_0"
           },
           "properties": {}
         },
@@ -3742,6 +3742,37 @@
           "properties": {}
         },
         {
+          "ruleId": "428d39b6-404c-3adc-b1d8-807156f85a70",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `_get_schema` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/io/orc/arrow.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 9,
+                  "endLine": 34,
+                  "endColumn": 26,
+                  "snippet": {
+                    "text": "        def _get_schema(_o, schema):\n            if schema is None:\n                schema = _o.schema\n            elif schema != _o.schema:\n                raise ValueError(\"Incompatible schemas while parsing ORC files\")\n            return schema"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "101a5b6022a91bb96265b8235610abe15b1bf7890fe571c81332f6eb618d2807606b2f884d70b050d34dba35547d3c2fa4a23df323573d232b5e7d06ce9a0eb4_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "2827793d-4efb-3816-9b96-c7ac3f33655e",
           "kind": "fail",
           "level": "warning",
@@ -3769,68 +3800,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "df373a7ce63ecce5e4a85477a3a1a8929a89c3c22a1a16b02fb6196662e0dd81132fa21280d0372dd7e373c3a72d035c911f41e7b8694f795077ef93ab24e212_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "7fe418ce-aabd-3e1f-917b-83eca8766141",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dataframe/multi.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1399,
-                  "startColumn": 14,
-                  "endLine": 1399,
-                  "endColumn": 30,
-                  "snippet": {
-                    "text": "        on = pickle.loads(on)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "6a8fc9eacef4f9aeaa17595f6eaf4461d06058a0a7fedb4e82e6bee3a0b68c03a250b0ebd2c2613b2c2821600d13e358e58d7d49fd241ea2ede0b3e741d1fdc4_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "8643099f-1ab7-3476-91c8-8c7fb3ebf04d",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"__index_level_\\d+__\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dataframe/io/parquet/utils.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 396,
-                  "startColumn": 22,
-                  "endLine": 396,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "    index_name_xpr = re.compile(r\"__index_level_\\d+__\")"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "da7c0425d1f245aff3ca1621b60c18c939fe4355313dc7856fff4d9619847d12f627a5e03c542a02cabfde4583c0cdb15c33047240271769a24bac653afa96ec_0"
           },
           "properties": {}
         },
@@ -3866,6 +3835,68 @@
           "properties": {}
         },
         {
+          "ruleId": "8643099f-1ab7-3476-91c8-8c7fb3ebf04d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"__index_level_\\d+__\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/io/parquet/utils.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 396,
+                  "startColumn": 22,
+                  "endLine": 396,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "    index_name_xpr = re.compile(r\"__index_level_\\d+__\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "da7c0425d1f245aff3ca1621b60c18c939fe4355313dc7856fff4d9619847d12f627a5e03c542a02cabfde4583c0cdb15c33047240271769a24bac653afa96ec_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "7fe418ce-aabd-3e1f-917b-83eca8766141",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dataframe/multi.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1399,
+                  "startColumn": 14,
+                  "endLine": 1399,
+                  "endColumn": 30,
+                  "snippet": {
+                    "text": "        on = pickle.loads(on)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "6a8fc9eacef4f9aeaa17595f6eaf4461d06058a0a7fedb4e82e6bee3a0b68c03a250b0ebd2c2613b2c2821600d13e358e58d7d49fd241ea2ede0b3e741d1fdc4_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "295ee136-a0aa-35e9-8535-38af2ccaa036",
           "kind": "fail",
           "level": "warning",
@@ -3893,37 +3924,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "6a8fc9eacef4f9aeaa17595f6eaf4461d06058a0a7fedb4e82e6bee3a0b68c03a250b0ebd2c2613b2c2821600d13e358e58d7d49fd241ea2ede0b3e741d1fdc4_1"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "53534619-14ff-3170-83f4-fa13adec84aa",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/diagnostics/profile.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 352,
-                  "startColumn": 60,
-                  "endLine": 352,
-                  "endColumn": 61,
-                  "snippet": {
-                    "text": "        self._metric = metric if metric else lambda value: 1"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "941442c4048b759e39b8c405c764db1bb977d8770d8eea2e7d8ad44dd04c8f7a6b973a7f4306fd4227a17a249d8d314d55cf0039321722d01899734b9324204f_0"
           },
           "properties": {}
         },
@@ -3986,6 +3986,68 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "254577b6e5d6e64590a3fdbda1b282f8c11ee597f6207cebd9adbc72045529cab27d9a361b0af8ea00a308cad9f947ef8db63eae8e4d66048d2535533d7963b8_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "53534619-14ff-3170-83f4-fa13adec84aa",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` should never appear inside a class __init__ function. This will cause a runtime error."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/diagnostics/profile.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 352,
+                  "startColumn": 60,
+                  "endLine": 352,
+                  "endColumn": 61,
+                  "snippet": {
+                    "text": "        self._metric = metric if metric else lambda value: 1"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "941442c4048b759e39b8c405c764db1bb977d8770d8eea2e7d8ad44dd04c8f7a6b973a7f4306fd4227a17a249d8d314d55cf0039321722d01899734b9324204f_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dot.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 12,
+                  "endLine": 56,
+                  "endColumn": 88,
+                  "snippet": {
+                    "text": "_UUIDPAT = re.compile(\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "008fed143e8b03e077fdbb77f6aaf7b906211d311ba9aa226f9cadd2dfadeaa0a2065a7a70d73f308a383b564a751765c65240b558ba8202fb1816d4b85a85a1_0"
           },
           "properties": {}
         },
@@ -4083,33 +4145,33 @@
           "properties": {}
         },
         {
-          "ruleId": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
+          "ruleId": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Regex `\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+            "text": "function `sizeof_numba_devicendarray` is defined inside a function but never used"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "dask/dot.py",
+                  "uri": "dask/sizeof.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 56,
-                  "startColumn": 12,
-                  "endLine": 56,
-                  "endColumn": 88,
+                  "startLine": 107,
+                  "startColumn": 5,
+                  "endLine": 109,
+                  "endColumn": 29,
                   "snippet": {
-                    "text": "_UUIDPAT = re.compile(\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\")"
+                    "text": "    @sizeof.register(numba.cuda.cudadrv.devicearray.DeviceNDArray)\n    def sizeof_numba_devicendarray(x):\n        return int(x.nbytes)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "008fed143e8b03e077fdbb77f6aaf7b906211d311ba9aa226f9cadd2dfadeaa0a2065a7a70d73f308a383b564a751765c65240b558ba8202fb1816d4b85a85a1_0"
+            "matchBasedId/v1": "5325188add1b3669087d20e5de152d236dcf3b0a784297015afd95b5855cf7bd3bf9a4f20551d6d8f0729641c959e822444ffaec8cf9518dd59e46a1d548284b_0"
           },
           "properties": {}
         },
@@ -4141,37 +4203,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "0ef4899f47eb06ea5de183fb7dd39286dd5b94acbd8003467fd0952c46116f873f6ff640562d181e6e878930ee12e1c3a6383fcde43b1ab7f02bbb9caabb6aaa_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `sizeof_numba_devicendarray` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/sizeof.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 107,
-                  "startColumn": 5,
-                  "endLine": 109,
-                  "endColumn": 29,
-                  "snippet": {
-                    "text": "    @sizeof.register(numba.cuda.cudadrv.devicearray.DeviceNDArray)\n    def sizeof_numba_devicendarray(x):\n        return int(x.nbytes)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5325188add1b3669087d20e5de152d236dcf3b0a784297015afd95b5855cf7bd3bf9a4f20551d6d8f0729641c959e822444ffaec8cf9518dd59e46a1d548284b_0"
           },
           "properties": {}
         },
@@ -4238,6 +4269,37 @@
           "properties": {}
         },
         {
+          "ruleId": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `sizeof_pandas_series` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/sizeof.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 192,
+                  "startColumn": 5,
+                  "endLine": 198,
+                  "endColumn": 17,
+                  "snippet": {
+                    "text": "    @sizeof.register(pd.Series)\n    def sizeof_pandas_series(s):\n        # https://github.com/dask/dask/pull/9776#issuecomment-1359085962\n        p = 1200 + sizeof(s.index) + s.memory_usage(index=False, deep=False)\n        if s.dtype in OBJECT_DTYPES:\n            p += object_size(s._values)\n        return p"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_1"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "e5f59957-21f4-37a5-96e7-78bd57fa68ec",
           "kind": "fail",
           "level": "warning",
@@ -4269,11 +4331,11 @@
           "properties": {}
         },
         {
-          "ruleId": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
+          "ruleId": "76a86994-4a4e-3b3f-b36b-106925a7b130",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "function `sizeof_pandas_series` is defined inside a function but never used"
+            "text": "function `sizeof_pandas_index` is defined inside a function but never used"
           },
           "locations": [
             {
@@ -4283,19 +4345,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 192,
+                  "startLine": 200,
                   "startColumn": 5,
-                  "endLine": 198,
+                  "endLine": 205,
                   "endColumn": 17,
                   "snippet": {
-                    "text": "    @sizeof.register(pd.Series)\n    def sizeof_pandas_series(s):\n        # https://github.com/dask/dask/pull/9776#issuecomment-1359085962\n        p = 1200 + sizeof(s.index) + s.memory_usage(index=False, deep=False)\n        if s.dtype in OBJECT_DTYPES:\n            p += object_size(s._values)\n        return p"
+                    "text": "    @sizeof.register(pd.Index)\n    def sizeof_pandas_index(i):\n        p = 400 + i.memory_usage(deep=False)\n        if i.dtype in OBJECT_DTYPES:\n            p += object_size(i)\n        return p"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_1"
+            "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_2"
           },
           "properties": {}
         },
@@ -4331,37 +4393,6 @@
           "properties": {}
         },
         {
-          "ruleId": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `sizeof_spmatrix_dok` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/sizeof.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 219,
-                  "startColumn": 5,
-                  "endLine": 221,
-                  "endColumn": 30,
-                  "snippet": {
-                    "text": "    @sizeof.register(sparse.dok_matrix)\n    def sizeof_spmatrix_dok(s):\n        return s.__sizeof__()"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "9ae8679fa416bf5611cd356d8f005aa26a3e8a2d2af60f4c120b033c0cdd57e9e5fa9533657c1dfbe9dfa24b5ecb668e8bd3220439bbbfc733675c210baf0fc9_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "c3b42b42-66dd-378f-b516-80c227c949a3",
           "kind": "fail",
           "level": "warning",
@@ -4393,11 +4424,11 @@
           "properties": {}
         },
         {
-          "ruleId": "4e9c9e9d-8b17-3a6e-9dc2-f56828880ecf",
+          "ruleId": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "function `sizeof_pyarrow_chunked_array` is defined inside a function but never used"
+            "text": "function `sizeof_spmatrix_dok` is defined inside a function but never used"
           },
           "locations": [
             {
@@ -4407,19 +4438,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 249,
+                  "startLine": 219,
                   "startColumn": 5,
-                  "endLine": 251,
-                  "endColumn": 47,
+                  "endLine": 221,
+                  "endColumn": 30,
                   "snippet": {
-                    "text": "    @sizeof.register(pa.ChunkedArray)\n    def sizeof_pyarrow_chunked_array(data):\n        return int(_get_col_size(data)) + 1000"
+                    "text": "    @sizeof.register(sparse.dok_matrix)\n    def sizeof_spmatrix_dok(s):\n        return s.__sizeof__()"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "0b9dbc988fff522fd8a6b70600b2f2f22b4b1a37f6e7d8b32fb50ed65beb781b02defb7b05484f7953ef07df09958ceec1f4c2a2f6407b22673c2e808ee1c6bc_1"
+            "matchBasedId/v1": "9ae8679fa416bf5611cd356d8f005aa26a3e8a2d2af60f4c120b033c0cdd57e9e5fa9533657c1dfbe9dfa24b5ecb668e8bd3220439bbbfc733675c210baf0fc9_0"
           },
           "properties": {}
         },
@@ -4451,6 +4482,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "0b9dbc988fff522fd8a6b70600b2f2f22b4b1a37f6e7d8b32fb50ed65beb781b02defb7b05484f7953ef07df09958ceec1f4c2a2f6407b22673c2e808ee1c6bc_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "4e9c9e9d-8b17-3a6e-9dc2-f56828880ecf",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `sizeof_pyarrow_chunked_array` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/sizeof.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 249,
+                  "startColumn": 5,
+                  "endLine": 251,
+                  "endColumn": 47,
+                  "snippet": {
+                    "text": "    @sizeof.register(pa.ChunkedArray)\n    def sizeof_pyarrow_chunked_array(data):\n        return int(_get_col_size(data)) + 1000"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "0b9dbc988fff522fd8a6b70600b2f2f22b4b1a37f6e7d8b32fb50ed65beb781b02defb7b05484f7953ef07df09958ceec1f4c2a2f6407b22673c2e808ee1c6bc_1"
           },
           "properties": {}
         },
@@ -4703,37 +4765,6 @@
           "properties": {}
         },
         {
-          "ruleId": "e25dccd0-2cea-382c-84dd-215e9208abb2",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/utils_test.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 136,
-                  "startColumn": 16,
-                  "endLine": 136,
-                  "endColumn": 45,
-                  "snippet": {
-                    "text": "        return importlib.import_module(name)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "516b54a66666ef5656e2fcb1b7817aaef510baa3047414c05bb2053c1840cf136c00b2c3fe45cb08f316ce700b27f6c9b0976c216beff893cbd70ae46d85d176_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
           "kind": "fail",
           "level": "warning",
@@ -4761,6 +4792,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "97e03d9f90aebe3a76adb9239b1e4f86f4b1ae795e620c708fbe6083ccbe3ee756ec2248d831d68081f5041fbcf068638bb63711c230725850720b08864a03dd_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "e25dccd0-2cea-382c-84dd-215e9208abb2",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Untrusted user input in `importlib.import_module()` function allows an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()` or use a whitelist to prevent running untrusted code."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/utils_test.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 136,
+                  "startColumn": 16,
+                  "endLine": 136,
+                  "endColumn": 45,
+                  "snippet": {
+                    "text": "        return importlib.import_module(name)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "516b54a66666ef5656e2fcb1b7817aaef510baa3047414c05bb2053c1840cf136c00b2c3fe45cb08f316ce700b27f6c9b0976c216beff893cbd70ae46d85d176_0"
           },
           "properties": {}
         }
