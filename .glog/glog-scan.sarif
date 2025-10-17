@@ -36,7 +36,31 @@
               }
             },
             {
-              "id": "0610266d-1b0f-3348-af7c-4128fa942312",
+              "id": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -60,7 +84,7 @@
               }
             },
             {
-              "id": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
+              "id": "0610266d-1b0f-3348-af7c-4128fa942312",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -108,30 +132,6 @@
               }
             },
             {
-              "id": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "70d26c70-915b-3ba8-8f7f-7876ef5cb304",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -156,7 +156,7 @@
               }
             },
             {
-              "id": "ca0a1dd2-23c8-36f2-ae36-52d946d04ecf",
+              "id": "4b5be042-bc6a-3622-9110-29f9775e1cc8",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -180,7 +180,7 @@
               }
             },
             {
-              "id": "4b5be042-bc6a-3622-9110-29f9775e1cc8",
+              "id": "ca0a1dd2-23c8-36f2-ae36-52d946d04ecf",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -252,7 +252,7 @@
               }
             },
             {
-              "id": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
+              "id": "689f1149-355d-3a39-bae9-ff753c404bc7",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -276,7 +276,7 @@
               }
             },
             {
-              "id": "689f1149-355d-3a39-bae9-ff753c404bc7",
+              "id": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -520,7 +520,7 @@
               }
             },
             {
-              "id": "58f20195-4e41-3643-a83e-5730c13bc42b",
+              "id": "f44a7232-66ba-3299-8459-5741fd888548",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -544,7 +544,7 @@
               }
             },
             {
-              "id": "f44a7232-66ba-3299-8459-5741fd888548",
+              "id": "58f20195-4e41-3643-a83e-5730c13bc42b",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -812,7 +812,7 @@
               }
             },
             {
-              "id": "005b5370-6c3b-39a8-84bd-9ad37ff0818c",
+              "id": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -836,7 +836,7 @@
               }
             },
             {
-              "id": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
+              "id": "005b5370-6c3b-39a8-84bd-9ad37ff0818c",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1490,7 +1490,7 @@
               }
             },
             {
-              "id": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
+              "id": "ca6dcb01-ba1f-3eaf-aab3-353cb2de9650",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1514,7 +1514,7 @@
               }
             },
             {
-              "id": "ca6dcb01-ba1f-3eaf-aab3-353cb2de9650",
+              "id": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1587,7 +1587,7 @@
               }
             },
             {
-              "id": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
+              "id": "05eaf877-046b-34f8-bd74-3d7c9a6bfbc4",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1611,7 +1611,7 @@
               }
             },
             {
-              "id": "05eaf877-046b-34f8-bd74-3d7c9a6bfbc4",
+              "id": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1683,7 +1683,7 @@
               }
             },
             {
-              "id": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
+              "id": "e5f59957-21f4-37a5-96e7-78bd57fa68ec",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1707,7 +1707,7 @@
               }
             },
             {
-              "id": "e5f59957-21f4-37a5-96e7-78bd57fa68ec",
+              "id": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1779,7 +1779,7 @@
               }
             },
             {
-              "id": "c3b42b42-66dd-378f-b516-80c227c949a3",
+              "id": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -1803,7 +1803,7 @@
               }
             },
             {
-              "id": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
+              "id": "c3b42b42-66dd-378f-b516-80c227c949a3",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -2161,11 +2161,11 @@
           "properties": {}
         },
         {
-          "ruleId": "0610266d-1b0f-3348-af7c-4128fa942312",
+          "ruleId": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Detected subprocess function 'Popen' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
           },
           "locations": [
             {
@@ -2175,19 +2175,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 91,
-                  "startColumn": 23,
-                  "endLine": 98,
-                  "endColumn": 14,
+                  "startLine": 167,
+                  "startColumn": 26,
+                  "endLine": 167,
+                  "endColumn": 56,
                   "snippet": {
-                    "text": "            process = subprocess.Popen(\n                [command] + args,\n                cwd=cwd,\n                env=env,\n                stdout=subprocess.PIPE,\n                stderr=(subprocess.PIPE if hide_stderr else None),\n                **popen_kwargs,\n            )"
+                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "6e5d6501f9f83c120dc4d04cd2ff30ba35de433a65abb7c5f4a6a90c2b0f94ea7ddcee681c13b08b489f59c470fb766f6b57f59cfbfe3544738ed5a53a11d2e9_0"
+            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_1"
           },
           "properties": {}
         },
@@ -2223,6 +2223,37 @@
           "properties": {}
         },
         {
+          "ruleId": "0610266d-1b0f-3348-af7c-4128fa942312",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'Popen' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/_version.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 23,
+                  "endLine": 98,
+                  "endColumn": 14,
+                  "snippet": {
+                    "text": "            process = subprocess.Popen(\n                [command] + args,\n                cwd=cwd,\n                env=env,\n                stdout=subprocess.PIPE,\n                stderr=(subprocess.PIPE if hide_stderr else None),\n                **popen_kwargs,\n            )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "6e5d6501f9f83c120dc4d04cd2ff30ba35de433a65abb7c5f4a6a90c2b0f94ea7ddcee681c13b08b489f59c470fb766f6b57f59cfbfe3544738ed5a53a11d2e9_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
           "kind": "fail",
           "level": "warning",
@@ -2250,37 +2281,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/_version.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 167,
-                  "startColumn": 26,
-                  "endLine": 167,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_1"
           },
           "properties": {}
         },
@@ -2316,37 +2316,6 @@
           "properties": {}
         },
         {
-          "ruleId": "ca0a1dd2-23c8-36f2-ae36-52d946d04ecf",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/_version.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 171,
-                  "startColumn": 26,
-                  "endLine": 171,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_2"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "4b5be042-bc6a-3622-9110-29f9775e1cc8",
           "kind": "fail",
           "level": "warning",
@@ -2374,6 +2343,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "246d8dc71469c96bd15abd71429a3e9175f433da0901abd9a1575dbea981ecbbebf68c24a4d9eaf6f3b0b63857110d8f49169304bd1f7ab62b8505021486c9e0_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "ca0a1dd2-23c8-36f2-ae36-52d946d04ecf",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/_version.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 26,
+                  "endLine": 171,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_2"
           },
           "properties": {}
         },
@@ -2440,37 +2440,6 @@
           "properties": {}
         },
         {
-          "ruleId": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `numpy_to_cupy` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/backends.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 142,
-                  "startColumn": 5,
-                  "endLine": 144,
-                  "endColumn": 44,
-                  "snippet": {
-                    "text": "    @to_cupy_dispatch.register(np.ndarray)\n    def numpy_to_cupy(data, **kwargs):\n        return cupy.asarray(data, **kwargs)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "689f1149-355d-3a39-bae9-ff753c404bc7",
           "kind": "fail",
           "level": "warning",
@@ -2498,6 +2467,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `numpy_to_cupy` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/backends.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 5,
+                  "endLine": 144,
+                  "endColumn": 44,
+                  "snippet": {
+                    "text": "    @to_cupy_dispatch.register(np.ndarray)\n    def numpy_to_cupy(data, **kwargs):\n        return cupy.asarray(data, **kwargs)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_1"
           },
           "properties": {}
         },
@@ -3153,37 +3153,6 @@
           "properties": {}
         },
         {
-          "ruleId": "005b5370-6c3b-39a8-84bd-9ad37ff0818c",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `normalize_interval_array` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1159,
-                  "startColumn": 5,
-                  "endLine": 1165,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "    @normalize_token.register(pd.arrays.IntervalArray)\n    def normalize_interval_array(arr):\n        return [\n            normalize_token(arr.left),\n            normalize_token(arr.right),\n            normalize_token(arr.closed),\n        ]"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_4"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "821cd065-6057-36eb-9d25-b0d3d5c0f2a7",
           "kind": "fail",
           "level": "warning",
@@ -3211,6 +3180,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_3"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "005b5370-6c3b-39a8-84bd-9ad37ff0818c",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `normalize_interval_array` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1159,
+                  "startColumn": 5,
+                  "endLine": 1165,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "    @normalize_token.register(pd.arrays.IntervalArray)\n    def normalize_interval_array(arr):\n        return [\n            normalize_token(arr.left),\n            normalize_token(arr.right),\n            normalize_token(arr.closed),\n        ]"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_4"
           },
           "properties": {}
         },
@@ -4021,37 +4021,6 @@
           "properties": {}
         },
         {
-          "ruleId": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/dot.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 12,
-                  "endLine": 56,
-                  "endColumn": 88,
-                  "snippet": {
-                    "text": "_UUIDPAT = re.compile(\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\")"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "008fed143e8b03e077fdbb77f6aaf7b906211d311ba9aa226f9cadd2dfadeaa0a2065a7a70d73f308a383b564a751765c65240b558ba8202fb1816d4b85a85a1_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "ca6dcb01-ba1f-3eaf-aab3-353cb2de9650",
           "kind": "fail",
           "level": "warning",
@@ -4079,6 +4048,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "cc073bfe606fdaa5a656222fb647c8e4f62b866fa5ebd8045630cea3a071cf158b807ce106942226aa484d808c45af066f5be37b5de3852566a0b5f992baba0f_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "99990f49-828b-30a6-bd2d-b70c1dd647bb",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/dot.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 12,
+                  "endLine": 56,
+                  "endColumn": 88,
+                  "snippet": {
+                    "text": "_UUIDPAT = re.compile(\"([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "008fed143e8b03e077fdbb77f6aaf7b906211d311ba9aa226f9cadd2dfadeaa0a2065a7a70d73f308a383b564a751765c65240b558ba8202fb1816d4b85a85a1_0"
           },
           "properties": {}
         },
@@ -4145,37 +4145,6 @@
           "properties": {}
         },
         {
-          "ruleId": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `sizeof_numba_devicendarray` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/sizeof.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 107,
-                  "startColumn": 5,
-                  "endLine": 109,
-                  "endColumn": 29,
-                  "snippet": {
-                    "text": "    @sizeof.register(numba.cuda.cudadrv.devicearray.DeviceNDArray)\n    def sizeof_numba_devicendarray(x):\n        return int(x.nbytes)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5325188add1b3669087d20e5de152d236dcf3b0a784297015afd95b5855cf7bd3bf9a4f20551d6d8f0729641c959e822444ffaec8cf9518dd59e46a1d548284b_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "05eaf877-046b-34f8-bd74-3d7c9a6bfbc4",
           "kind": "fail",
           "level": "warning",
@@ -4203,6 +4172,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "0ef4899f47eb06ea5de183fb7dd39286dd5b94acbd8003467fd0952c46116f873f6ff640562d181e6e878930ee12e1c3a6383fcde43b1ab7f02bbb9caabb6aaa_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "7b0e8bd2-11a5-3797-89a5-8ff68a89aaf7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `sizeof_numba_devicendarray` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/sizeof.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 107,
+                  "startColumn": 5,
+                  "endLine": 109,
+                  "endColumn": 29,
+                  "snippet": {
+                    "text": "    @sizeof.register(numba.cuda.cudadrv.devicearray.DeviceNDArray)\n    def sizeof_numba_devicendarray(x):\n        return int(x.nbytes)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "5325188add1b3669087d20e5de152d236dcf3b0a784297015afd95b5855cf7bd3bf9a4f20551d6d8f0729641c959e822444ffaec8cf9518dd59e46a1d548284b_0"
           },
           "properties": {}
         },
@@ -4269,37 +4269,6 @@
           "properties": {}
         },
         {
-          "ruleId": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `sizeof_pandas_series` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/sizeof.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 192,
-                  "startColumn": 5,
-                  "endLine": 198,
-                  "endColumn": 17,
-                  "snippet": {
-                    "text": "    @sizeof.register(pd.Series)\n    def sizeof_pandas_series(s):\n        # https://github.com/dask/dask/pull/9776#issuecomment-1359085962\n        p = 1200 + sizeof(s.index) + s.memory_usage(index=False, deep=False)\n        if s.dtype in OBJECT_DTYPES:\n            p += object_size(s._values)\n        return p"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "e5f59957-21f4-37a5-96e7-78bd57fa68ec",
           "kind": "fail",
           "level": "warning",
@@ -4327,6 +4296,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "d6a7d445-76c5-3f13-bb7d-883fdde7e52e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `sizeof_pandas_series` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/sizeof.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 192,
+                  "startColumn": 5,
+                  "endLine": 198,
+                  "endColumn": 17,
+                  "snippet": {
+                    "text": "    @sizeof.register(pd.Series)\n    def sizeof_pandas_series(s):\n        # https://github.com/dask/dask/pull/9776#issuecomment-1359085962\n        p = 1200 + sizeof(s.index) + s.memory_usage(index=False, deep=False)\n        if s.dtype in OBJECT_DTYPES:\n            p += object_size(s._values)\n        return p"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "4ea6c4944e3b2d2d322c4941c336fc2b09fb2e7d81439429a443890b70acf14c84229c2a6d2dda728c7dc9725880748573d98d02040a4a6a152a64797e73e2d6_1"
           },
           "properties": {}
         },
@@ -4393,37 +4393,6 @@
           "properties": {}
         },
         {
-          "ruleId": "c3b42b42-66dd-378f-b516-80c227c949a3",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `sizeof_spmatrix` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/sizeof.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 223,
-                  "startColumn": 5,
-                  "endLine": 225,
-                  "endColumn": 59,
-                  "snippet": {
-                    "text": "    @sizeof.register(sparse.spmatrix)\n    def sizeof_spmatrix(s):\n        return sum(sizeof(v) for v in s.__dict__.values())"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "9ae8679fa416bf5611cd356d8f005aa26a3e8a2d2af60f4c120b033c0cdd57e9e5fa9533657c1dfbe9dfa24b5ecb668e8bd3220439bbbfc733675c210baf0fc9_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "3a1fec2e-b043-3392-9d97-39b031eb7f43",
           "kind": "fail",
           "level": "warning",
@@ -4451,6 +4420,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "9ae8679fa416bf5611cd356d8f005aa26a3e8a2d2af60f4c120b033c0cdd57e9e5fa9533657c1dfbe9dfa24b5ecb668e8bd3220439bbbfc733675c210baf0fc9_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "c3b42b42-66dd-378f-b516-80c227c949a3",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `sizeof_spmatrix` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/sizeof.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 223,
+                  "startColumn": 5,
+                  "endLine": 225,
+                  "endColumn": 59,
+                  "snippet": {
+                    "text": "    @sizeof.register(sparse.spmatrix)\n    def sizeof_spmatrix(s):\n        return sum(sizeof(v) for v in s.__dict__.values())"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "9ae8679fa416bf5611cd356d8f005aa26a3e8a2d2af60f4c120b033c0cdd57e9e5fa9533657c1dfbe9dfa24b5ecb668e8bd3220439bbbfc733675c210baf0fc9_1"
           },
           "properties": {}
         },
