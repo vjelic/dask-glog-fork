@@ -36,7 +36,31 @@
               }
             },
             {
-              "id": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
+              "id": "0610266d-1b0f-3348-af7c-4128fa942312",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
+              "id": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -84,31 +108,7 @@
               }
             },
             {
-              "id": "0610266d-1b0f-3348-af7c-4128fa942312",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
-                ]
-              }
-            },
-            {
-              "id": "4b6e8d4d-13ea-3440-8075-f58abe375a6e",
+              "id": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -228,6 +228,30 @@
               }
             },
             {
+              "id": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
+              "name": "resources.rules.useless-inner-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.useless-inner-function"
+              },
+              "fullDescription": {
+                "text": "function `$FF` is defined inside a function but never used"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.useless-inner-function"
+                ]
+              }
+            },
+            {
               "id": "284b638b-599a-3b9c-89e8-d4c0ccd5333d",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
@@ -253,30 +277,6 @@
             },
             {
               "id": "689f1149-355d-3a39-bae9-ff753c404bc7",
-              "name": "resources.rules.useless-inner-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.useless-inner-function"
-              },
-              "fullDescription": {
-                "text": "function `$FF` is defined inside a function but never used"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "function `$FF` is defined inside a function but never used\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "function `$FF` is defined inside a function but never used\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.useless-inner-function"
-                ]
-              }
-            },
-            {
-              "id": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -618,30 +618,6 @@
               }
             },
             {
-              "id": "b126dd5e-fc97-3690-885e-3737566abe88",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "f998578b-95c5-3eb9-ae7e-a850871761e8",
               "name": "python.lang.security.audit.non-literal-import.non-literal-import",
               "shortDescription": {
@@ -663,6 +639,30 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.audit.non-literal-import.non-literal-import"
+                ]
+              }
+            },
+            {
+              "id": "b126dd5e-fc97-3690-885e-3737566abe88",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
                 ]
               }
             },
@@ -908,7 +908,7 @@
               }
             },
             {
-              "id": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
+              "id": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -932,7 +932,7 @@
               }
             },
             {
-              "id": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
+              "id": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
               "name": "resources.rules.useless-inner-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.useless-inner-function"
@@ -2069,31 +2069,6 @@
               }
             },
             {
-              "id": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
-              "name": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
-              "shortDescription": {
-                "text": "Opengrep Finding: python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2"
-              },
-              "fullDescription": {
-                "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "helpUri": "https://semgrep.dev/r/python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
-              "help": {
-                "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2)\n - [https://jinja.palletsprojects.com/en/2.11.x/api/#basics](https://jinja.palletsprojects.com/en/2.11.x/api/#basics)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2"
-                ]
-              }
-            },
-            {
               "id": "e25dccd0-2cea-382c-84dd-215e9208abb2",
               "name": "python.lang.security.audit.non-literal-import.non-literal-import",
               "shortDescription": {
@@ -2115,6 +2090,31 @@
                 "precision": "very-high",
                 "tags": [
                   "python.lang.security.audit.non-literal-import.non-literal-import"
+                ]
+              }
+            },
+            {
+              "id": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
+              "name": "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
+              "shortDescription": {
+                "text": "Opengrep Finding: python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2"
+              },
+              "fullDescription": {
+                "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "helpUri": "https://semgrep.dev/r/python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2",
+              "help": {
+                "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2)\n - [https://jinja.palletsprojects.com/en/2.11.x/api/#basics](https://jinja.palletsprojects.com/en/2.11.x/api/#basics)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2"
                 ]
               }
             }
@@ -2157,68 +2157,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "94db52d20e63e9e2e71f56dcc57a3a59731ccd39f0e13b7c31afbb397cb99de8c37a747b20439cc1e24bc064e882334a5ccd399e0d8e9d644fffbf8a52c72e14_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/_version.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 167,
-                  "startColumn": 26,
-                  "endLine": 167,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_1"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'STARTUPINFO' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/_version.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 23,
-                  "endLine": 83,
-                  "endColumn": 47,
-                  "snippet": {
-                    "text": "        startupinfo = subprocess.STARTUPINFO()"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "1eec02b02880e8789a91d562a2114a547484a1eb101c5e384441b7562ddebd2142ae5c91f39b3a3050fb43af292d96fb039376055ecafef64260e17179ce8084_0"
           },
           "properties": {}
         },
@@ -2281,6 +2219,68 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "2ba79c03-0d77-38a4-8d1c-56d7199e0bc2",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'STARTUPINFO' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/_version.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 23,
+                  "endLine": 83,
+                  "endColumn": 47,
+                  "snippet": {
+                    "text": "        startupinfo = subprocess.STARTUPINFO()"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "1eec02b02880e8789a91d562a2114a547484a1eb101c5e384441b7562ddebd2142ae5c91f39b3a3050fb43af292d96fb039376055ecafef64260e17179ce8084_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "dba00224-9ae8-3667-80d1-dd8bd4b14369",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r'=\\s*\"(.*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/_version.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 167,
+                  "startColumn": 26,
+                  "endLine": 167,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "                    mo = re.search(r'=\\s*\"(.*)\"', line)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "3621882756bd300c8bd664a71bf7ee80b6392c4225dbbff48abac03ebe3230e93a49841de82f070401f9f641d917d617f66e938a0e50e81af48adf2661fe552a_1"
           },
           "properties": {}
         },
@@ -2409,6 +2409,37 @@
           "properties": {}
         },
         {
+          "ruleId": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `numpy_to_cupy` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/backends.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 5,
+                  "endLine": 144,
+                  "endColumn": 44,
+                  "snippet": {
+                    "text": "    @to_cupy_dispatch.register(np.ndarray)\n    def numpy_to_cupy(data, **kwargs):\n        return cupy.asarray(data, **kwargs)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_1"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "284b638b-599a-3b9c-89e8-d4c0ccd5333d",
           "kind": "fail",
           "level": "warning",
@@ -2467,37 +2498,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_2"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "62af2821-14b4-3287-bdb6-7bb8bbb36b24",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `numpy_to_cupy` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/backends.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 142,
-                  "startColumn": 5,
-                  "endLine": 144,
-                  "endColumn": 44,
-                  "snippet": {
-                    "text": "    @to_cupy_dispatch.register(np.ndarray)\n    def numpy_to_cupy(data, **kwargs):\n        return cupy.asarray(data, **kwargs)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "1b296f035c32db70fb17b7beddfff09dde4d3c5c5e57ff7920c9afdd91ad0b2598ecdb48b33133f224784222d9be122379db625c598eb0decdb6a2b71b6a3f14_1"
           },
           "properties": {}
         },
@@ -2905,37 +2905,6 @@
           "properties": {}
         },
         {
-          "ruleId": "b126dd5e-fc97-3690-885e-3737566abe88",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r'height=\"(\\d*\\.?\\d*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/array/svg.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 153,
-                  "startColumn": 24,
-                  "endLine": 153,
-                  "endColumn": 66,
-                  "snippet": {
-                    "text": "        height = float(re.search(r'height=\"(\\d*\\.?\\d*)\"', header).groups()[0])"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5138a0dcac706438617b0e72def00f5ff800875bc6b7ad9e4712b53aeed571d85dfeeaa658c814d08c46edf8e602db0e40b19130948dd19c76299ce9d2cc39cc_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "f998578b-95c5-3eb9-ae7e-a850871761e8",
           "kind": "fail",
           "level": "warning",
@@ -2963,6 +2932,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "41bd37bd02a185b947288f14f95554c8c27ac15ba4521f67c76885d370056fcc330eb9874953f52056ca2368d7e234516949560c32517168b70c40c80dff0c8b_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "b126dd5e-fc97-3690-885e-3737566abe88",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r'height=\"(\\d*\\.?\\d*)\"'` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/array/svg.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 153,
+                  "startColumn": 24,
+                  "endLine": 153,
+                  "endColumn": 66,
+                  "snippet": {
+                    "text": "        height = float(re.search(r'height=\"(\\d*\\.?\\d*)\"', header).groups()[0])"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "5138a0dcac706438617b0e72def00f5ff800875bc6b7ad9e4712b53aeed571d85dfeeaa658c814d08c46edf8e602db0e40b19130948dd19c76299ce9d2cc39cc_0"
           },
           "properties": {}
         },
@@ -3277,37 +3277,6 @@
           "properties": {}
         },
         {
-          "ruleId": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "function `normalize_categorical_dtype` is defined inside a function but never used"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/base.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1189,
-                  "startColumn": 5,
-                  "endLine": 1191,
-                  "endColumn": 83,
-                  "snippet": {
-                    "text": "    @normalize_token.register(pd.api.types.CategoricalDtype)\n    def normalize_categorical_dtype(dtype):\n        return [normalize_token(dtype.categories), normalize_token(dtype.ordered)]"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_8"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "93bb7c8e-326b-3eb7-b130-51230a9eceea",
           "kind": "fail",
           "level": "warning",
@@ -3335,6 +3304,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_7"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "f9ff7080-3441-33b0-81a6-f8f5a687d5ba",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "function `normalize_categorical_dtype` is defined inside a function but never used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/base.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1189,
+                  "startColumn": 5,
+                  "endLine": 1191,
+                  "endColumn": 83,
+                  "snippet": {
+                    "text": "    @normalize_token.register(pd.api.types.CategoricalDtype)\n    def normalize_categorical_dtype(dtype):\n        return [normalize_token(dtype.categories), normalize_token(dtype.ordered)]"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c5b0c2d99e58f666c92de9cd1a0d70ded34ff3425cca82a9877b8a274adb3251c407c2651708e3cac6271491cc9a212f283c7d8d7b83f9eb445edaf060701066_8"
           },
           "properties": {}
         },
@@ -4765,37 +4765,6 @@
           "properties": {}
         },
         {
-          "ruleId": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "dask/widgets/widgets.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 28,
-                  "startColumn": 19,
-                  "endLine": 28,
-                  "endColumn": 45,
-                  "snippet": {
-                    "text": "    environment = Environment(loader=loader)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "97e03d9f90aebe3a76adb9239b1e4f86f4b1ae795e620c708fbe6083ccbe3ee756ec2248d831d68081f5041fbcf068638bb63711c230725850720b08864a03dd_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "e25dccd0-2cea-382c-84dd-215e9208abb2",
           "kind": "fail",
           "level": "warning",
@@ -4823,6 +4792,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "516b54a66666ef5656e2fcb1b7817aaef510baa3047414c05bb2053c1840cf136c00b2c3fe45cb08f316ce700b27f6c9b0976c216beff893cbd70ae46d85d176_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "196054ce-4e90-3ad3-8a0d-49c901ee4595",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "dask/widgets/widgets.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 19,
+                  "endLine": 28,
+                  "endColumn": 45,
+                  "snippet": {
+                    "text": "    environment = Environment(loader=loader)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "97e03d9f90aebe3a76adb9239b1e4f86f4b1ae795e620c708fbe6083ccbe3ee756ec2248d831d68081f5041fbcf068638bb63711c230725850720b08864a03dd_0"
           },
           "properties": {}
         }
